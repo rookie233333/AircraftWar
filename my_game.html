@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>腾讯游戏</title>
+</head>
+<style>
+	body{
+		text-align: center;
+		background-color:#B07763;
+	}
+	#center{
+		width: 500px;
+		height: 700px;
+		position: absolute;
+		left: 50%;
+		top: 5px;
+		margin-left: -250px;
+	}
+	#bg_div{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	.bg_img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.start{
+		position: absolute; 
+		top: 400px; 
+		left: 150px;
+	}
+	.start:hover{
+		cursor: pointer;
+	}
+	.bg_select{
+		position: absolute;
+		top: 350px;
+		left: 150px;
+		/*display: none;*/
+	}
+	.bg_select span{
+		color: #FF6501;
+		font-size: 15px;
+	}
+	.user_control{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 5px;
+		right: 6px;
+	}
+	.user_control img:hover{
+		cursor: pointer;
+	}
+	.pause{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	.play{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+</style>
+<!--导入工具函数 -->
+<script type="text/javascript" src="js/common.js"></script>
+<!-- 导入角色 -->
+<script type="text/javascript" src="js/roles.js"></script>
+<!-- 导入游戏引擎 -->
+<script type="text/javascript" src="js/engine.js"></script>
+<!-- 游戏主程序 -->
+<script type="text/javascript" src="js/main.js"></script>
+<body>
+	<div id="bg_div">
+		<img class="bg_img" <!--src="img/bg2.jpg"-->/>
+	</div>
+	<canvas id="canvas">
+		浏览器不支持画布
+	</canvas>
+	<audio src="music/backgroundMusic1.mp3" loop="loop" id="bgm">
+		浏览器不支持audio标签
+	</audio>
+	<audio id="boomMusic">
+		浏览器不支持audio标签
+	</audio>
+	<div id="center">
+		<img src="img/startGame.png" class="start"/>
+		<form class="bg_select">
+			<span>Background:</span>
+			<select class="select">
+				<option value="img/bg_sky1.jpg">bg_sky1</option>
+				<option value="img/bg_sky2.jpg">bg_sky2</option>
+				<option value="img/black_bg1.jpg">bg_starrySky1</option>
+				<option value="img/black_bg2.jpg">bg_starrySky2</option>
+				<option value="img/bg_sea.jpg">bg_sea</option>
+			</select>
+		</form>
+		<div class="user_control">
+			<img class="pause" src="img/pause.png"/>
+			<img class="play" src="img/play.png" />
+		</div>
+	</div>
+</body>
+
+</html>
